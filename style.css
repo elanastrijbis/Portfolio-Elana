@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Open+Sans&family=Varela&display=swap');
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  min-height:200vh;
+}
+
+/* Normal Header */
+
+header{
+  position:relative;
+  top:10px;
+  left:0;
+  height:10vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  color:#fff;
+  z-index:1000;
+  transition:all .6s ease-in-out;
+}
+header .logo{
+  font-size:2rem;
+  font-weight:700;
+  text-transform:uppercase;
+}
+header ul{
+  width:40%;
+  height:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  list-style:none;
+}
+header ul li a{
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing: 1.2px;
+  padding: 8px 13px;
+  text-decoration:none;
+  text-transform:capitalize;
+  transition:all .6s ease-in-out;
+}
+
+header ul li a:hover{
+  color: #e05c70;
+}
+header ul li a:not(:first-child){
+  margin-left:10px;
+}
+header .icon{
+  display:none;
+  cursor:pointer;
+}
+header .icon .line{
+  width:30px;
+  height:3px;
+  background-color:#fff;
+}
+header .icon .line:not(:first-child)
+{
+  margin-top:6px;
+}
+
+/* Sticky Header */
+
+header.sticky{
+  position:sticky;
+  top:0;
+  padding:5px 120px;
+  color:#000;
+  background-color:#fff;
+}
+
+header.sticky ul li a{
+  color:#000;
+}
+
+header.sticky ul li a:hover{
+  color: #e05c70;
+}
+
+header.sticky .icon .line{
+  background-color:#000;
+}
+
+/* Banner Section */
+
+.banner{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background-image:url('header-background.jpg');
+  background-size:cover;
+  background-position:center;
+  opacity: calc(0.8);
+}
+
+/* Media Quiries */
+
+@media screen and (max-width:900px){
+  header ul{
+    width:60%;
+  }
+}
+@media screen and (max-width:800px){
+  header ul{
+    display:none;
+  }
+  header .icon{
+    display:block;
+  }
+}
+
+/* Typer title */
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font: 90px/1.1em 'opensans-bold', sans-serif;
+  font-weight: 800;
+  font-size: 78px;
+  line-height: 1.1em;
+  letter-spacing: -2px;
+  text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.description {
+  position: absolute;
+  top: 57%;
+  right: 20%;
+  text-align: center;
+  font: 18px/1.9em 'librebaskerville-regular', serif;
+  color: #A8A8A8;
+  margin: 0 auto;
+  width: 60%;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+
+.Australia {
+  top: 57%;
+  right: 20%;
+  text-align: center;
+  font: 22px/1.9em 'librebaskerville-regular', serif;
+  color: white;
+  margin: 0 auto;
+  width: 60%;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+
+/* empty div to reset positions */
+.empty{
+  height: 100vh;
+}
+
+#about{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* about page */
+#two{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  width: 50%;
+  height: 600px;
+  background:url("about.jpg") no-repeat center / cover;
+}
+
+.right{
+  width: 50%;
+  min-height: 400px;
+  background-color: #eeedee;
+  color: #6b6263;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-left: -120px;
+  opacity: calc(0.9);
+}
+
+.right h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.right p{
+  margin: 20px 0;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.right a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: white;
+  color: #342c2c;
+  padding: 20px 30px;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background-color:  #e05c70;
+  color: white;
+
+}
+
+.content {
+  font-family: 'Varela', sans-serif;
+}
+
+@media only screen and (max-width: 768px){
+  .container{
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+  }
+  .left{
+    width: 100%;
+    height: 400px;
+  }
+  .right{
+    width: 90%;
+    margin: 0;
+    margin-top: -100px;
+  }
+}
+
+/* scroll effect  */
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.scroll-container {
+  position: relative;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}

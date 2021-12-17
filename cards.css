@@ -1,0 +1,61 @@
+#three {
+  /* background-color: blue; */
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.card {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.2s, ease-out;
+  transform: translateY(5px);
+  box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+ a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+
+.card-header {
+  color: #6b6263;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  background-color: #b3aca7;
+  padding: 5px 10px;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.material-icons {
+  font-size: 72px;
+  color: #6b6263;
+  /* color: #D32F2F; */
+  margin-bottom: 5px;
+}
+
+
+.main-description {
+  color: #6b6263;
+  font-size: 25px;
+  text-align: center;
+}
