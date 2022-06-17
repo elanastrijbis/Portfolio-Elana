@@ -1,100 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Open+Sans&family=Varela&display=swap');
 *{
-  margin:0;
-  padding:0;
+  /* margin:0; ORIGINAL
+  /* padding:0; */
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
-body{
+body {
   min-height:200vh;
+  /* NEW below padding and MARGIN */
+  padding: 0;
+  margin: 0;
 }
 
-/* Normal Header */
-
-header{
-  position:relative;
-  top:10px;
-  left:0;
-  height:10vh;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 80px;
-  color:#fff;
-  z-index:1000;
-  transition:all .6s ease-in-out;
-}
-header .logo{
-  font-size:2rem;
-  font-weight:700;
-  text-transform:uppercase;
-}
-header ul{
-  width:40%;
-  height:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  list-style:none;
-}
-header ul li a{
-  color:#fff;
-  font-size:14px;
-  font-weight:600;
-  letter-spacing: 1.2px;
-  padding: 8px 13px;
-  text-decoration:none;
-  text-transform:capitalize;
-  transition:all .6s ease-in-out;
+nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
 }
 
-header ul li a:hover{
-  color: #e05c70;
-}
-header ul li a:not(:first-child){
-  margin-left:10px;
-}
-header .icon{
-  display:none;
-  cursor:pointer;
-}
-header .icon .line{
-  width:30px;
-  height:3px;
-  background-color:#fff;
-}
-header .icon .line:not(:first-child)
-{
-  margin-top:6px;
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
 }
 
-/* Sticky Header */
+.navbar-links {
+    height: 100%;
+}
 
-header.sticky{
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+
+/* ORIGINAL navbar */
+
+                /* navbar{
+                  position:relative;
+                  top:10px;
+                  left:0;
+                  height:10vh;
+                  display:flex;
+                  justify-content:space-between;
+                  align-items:center;
+                  padding:20px 80px;
+                  color:#fff;
+                  z-index:1000;
+                  transition:all .6s ease-in-out;
+                }
+                navbar .brand-title{
+                  font-size:2rem;
+                  font-weight:700;
+                  text-transform:uppercase;
+                }
+                navbar ul{
+                  width:40%;
+                  height:100%;
+                  display:flex;
+                  justify-content:space-between;
+                  align-items:center;
+                  list-style:none;
+                }
+                navbar ul li a{
+                  color:#fff;
+                  font-size:14px;
+                  font-weight:600;
+                  letter-spacing: 1.2px;
+                  padding: 8px 13px;
+                  text-decoration: none;
+                  text-transform: capitalize;
+                  transition:all .6s ease-in-out;
+                }
+
+                navbar ul li a:hover{
+                  color: #e05c70;
+                }
+                navbar ul li a:not(:first-child){
+                  margin-left:10px;
+                }
+                navbar .icon{
+                  display:none;
+                  cursor:pointer;
+                }
+                navbar .icon .line{
+                  width:30px;
+                  height:3px;
+                  background-color:#fff;
+                }
+                navbar .icon .line:not(:first-child)
+                {
+                  margin-top:6px;
+                } */
+
+/* Sticky navbar */
+
+.sticky{
   position:sticky;
   top:0;
-  padding:5px 120px;
+  padding:5px ;
   color:#000;
   background-color:#fff;
+  z-index: 1;
 }
 
-header.sticky ul li a{
+.sticky ul li a{
   color:#000;
+  width: 100%;
 }
 
-header.sticky ul li a:hover{
+.sticky ul li a:hover{
   color: #e05c70;
 }
 
-header.sticky .icon .line{
+.sticky .brand-title .line{
   background-color:#000;
+}
+
+.sticky .toggle-button bar{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.sticky .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
 }
 
 /* Banner Section */
 
 .banner{
-  position:absolute;
+  /* position:absolute; */
   top:0;
   left:0;
   width:100%;
@@ -108,15 +193,15 @@ header.sticky .icon .line{
 /* Media Quiries */
 
 @media screen and (max-width:900px){
-  header ul{
+  nav ul{
     width:60%;
   }
 }
 @media screen and (max-width:800px){
-  header ul{
+  nav ul{
     display:none;
   }
-  header .icon{
+  nav .icon{
     display:block;
   }
 }
@@ -169,9 +254,9 @@ header.sticky .icon .line{
 }
 
 /* empty div to reset positions */
-.empty{
+/* .empty{
   height: 100vh;
-}
+} */
 
 #about{
   width: 100%;
@@ -276,7 +361,7 @@ section {
   scroll-snap-align: start;
 }
 
-.scroll-container {
+/* .scroll-container {
   position: relative;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -285,5 +370,56 @@ section {
 }
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
-}
+    /* background: transparent;  Optional: just make scrollbar invisible */
+/* } */
+
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    #text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font: 90px/1.1em 'opensans-bold', sans-serif;
+      font-weight: 800;
+      font-size: 78px;
+      line-height: 1.1em;
+      letter-spacing: -2px;
+      text-shadow: 0px 1px 3px rgb(0 0 0 / 80%);
+      /* overflow: hidden; */
+      white-space: nowrap;
+    }
+  }

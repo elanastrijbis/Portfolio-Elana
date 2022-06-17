@@ -15,36 +15,43 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="cards.css" />
+    <script src="script.js" defer></script>
+    <script src="onscroll.js" defer></script>
+    <script src="nav.js"></script>
 
-    <title>Elana Strijbis</title>
+    <title>Elana Strijbisss</title>
   </head>
   <body>
     <!-- <div class="main-container"> -->
-      <header>
-        <script src="nav.js"></script>
-
-        <div class="logo">Hi there</div>
+      <nav>
+        <!-- <script src="nav.js" defer></script> -->
+        <div class="brand-title">Nice to meet you</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
           <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#two">about</a></li>
-            <li><a href="#three">works</a></li>
-            <li><a href="#four">contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#two">About</a></li>
+            <li><a href="#three">Works</a></li>
+            <li><a href="#four">Contact</a></li>
           </ul>
-        <div class="icon">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
         </div>
-      </header>
-      <section class="banner">
-      </section>
+      </nav>
+      <section class="banner"></section>
+      <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+          var nav = document.querySelector("nav");
+          nav.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+      </script>
       <div id="text">
           <script src="type.js"></script>
         </div>
         <h3 class="description">Based in Melbourne, <span class="Australia">Australia</span>. I’m an aspiring full stack developer, looking to be a part of an innovative and qualitive team in a full-time role</h3>
-      <div class="empty">
-
-      </div>
       <div class="scroll-container">
       <section id="two">
       <div class="container">
@@ -54,7 +61,6 @@
             <h1>About</h1>
             <p>Hi there! I am Elana! A recent career changer into tech, I developed a keen interest in the industry while having time to reflect during lockdowns. Not long after I starting to code for fun in my spare time for a few months, I decided to enrol in an immersive full stack web development bootcamp at Le Wagon, which taught me technical skills as well as adapting quickly and easily to new learning environments. I'm inquisitive and eager to learn new things, and I love to code and problem solve. I enjoy working in a supportive and engaging environment with passionate team mates, while building exciting and innovative products that work to solve a problem.</p>
           <a href="Elana.pdf" class="btn" target="_blank">Resume</a>
-
           </div>
         </div>
       </div>
